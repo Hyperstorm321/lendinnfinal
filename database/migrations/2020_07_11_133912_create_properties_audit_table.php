@@ -32,6 +32,7 @@ class CreatePropertiesAuditTable extends Migration
             $table->longText('pet_allowed_comment');
             $table->integer('no_of_bedrooms')->default(0);
             $table->integer('no_of_bathrooms')->default(0);
+            $table->boolean('is_salable')->default(1);
 
             $table->string('detailed_address')->nullable();
             $table->bigInteger('region_id')->unsigned();
