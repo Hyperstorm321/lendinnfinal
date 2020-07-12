@@ -19,5 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::middleware('cors')->group(function(){
-    Route::get('/useraccounts', 'UserAccountController@get'); 
+    Route::get('/useraccounts/{user_id}', 'UserAccountController@get');
+    // Route::delete('/useraccounts/{user_id}', 'UserAccountController@delete'); 
+    Route::put('/useraccounts/{user_id}', 'UserAccountController@put'); 
  });

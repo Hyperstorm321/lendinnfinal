@@ -9,7 +9,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import Vuetify from '../plugins/vuetify'
-
+Vue.prototype.$userId = document.querySelector("meta[name='user-id']").getAttribute('content');
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -23,6 +23,7 @@ import Vuetify from '../plugins/vuetify'
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('index-page', require('./components/Index.vue').default);
+Vue.component('user-account', require('./components/authenticated/UserAccount.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
