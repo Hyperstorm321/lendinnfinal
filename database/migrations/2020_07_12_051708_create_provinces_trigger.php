@@ -33,13 +33,15 @@ class CreateProvincesTrigger extends Migration
                                     modified_date,
                                     operation,
                                     province_id,
-                                    province
+                                    province,
+                                    region_id
                                 )
                                 SELECT	@login_name,
                                         GETDATE(),
                                         'U',
                                         d.province_id,
-                                        d.province
+                                        d.province,
+                                        d.region_id
                                 FROM deleted d
                             END
                         ELSE 
@@ -49,13 +51,15 @@ class CreateProvincesTrigger extends Migration
                                     modified_date,
                                     operation,
                                     province_id,
-                                    province
+                                    province,
+                                    region_id
                                 )
                                 SELECT	@login_name,
                                         GETDATE(),
                                         'D',
                                         d.province_id,
-                                        d.province
+                                        d.province,
+                                        d.region_id
                                 FROM deleted d
                             END
                     END
@@ -66,13 +70,15 @@ class CreateProvincesTrigger extends Migration
                             modified_date,
                             operation,
                             province_id,
-                            province
+                            province,
+                            region_id
                         )
                         SELECT	@login_name,
                                 GETDATE(),
                                 'I',
                                 i.province_id,
-                                i.province
+                                i.province,
+                                i.region_id
                         FROM inserted i
                     END
             END

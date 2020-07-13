@@ -23,8 +23,6 @@ class CreateLandlordsAuditTable extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->string('agency_name')->nullable();
             $table->integer('membership_year');
-
-            $table->timestamps();
         });
     }
 

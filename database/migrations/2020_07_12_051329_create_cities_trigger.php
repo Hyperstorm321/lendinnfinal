@@ -33,13 +33,15 @@ class CreateCitiesTrigger extends Migration
                                     modified_date,
                                     operation,
                                     city_id,
-                                    city
+                                    city,
+                                    province_id
                                 )
                                 SELECT	@login_name,
                                         GETDATE(),
                                         'U',
                                         d.city_id,
-                                        d.city
+                                        d.city,
+                                        d.province_id
                                 FROM deleted d
                             END
                         ELSE 
@@ -49,13 +51,15 @@ class CreateCitiesTrigger extends Migration
                                     modified_date,
                                     operation,
                                     city_id,
-                                    city
+                                    city,
+                                    province_id
                                 )
                                 SELECT	@login_name,
                                         GETDATE(),
                                         'D',
                                         d.city_id,
-                                        d.city
+                                        d.city,
+                                        d.province_id
                                 FROM deleted d
                             END
                     END
@@ -66,13 +70,15 @@ class CreateCitiesTrigger extends Migration
                             modified_date,
                             operation,
                             city_id,
-                            city
+                            city,
+                            province_id
                         )
                         SELECT	@login_name,
                                 GETDATE(),
                                 'I',
                                 i.city_id,
-                                i.city
+                                i.city,
+                                i.province_id
                         FROM inserted i
                     END
             END

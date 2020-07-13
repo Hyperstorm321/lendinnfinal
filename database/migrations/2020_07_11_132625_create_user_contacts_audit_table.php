@@ -22,8 +22,6 @@ class CreateUserContactsAuditTable extends Migration
             $table->bigInteger('user_contact_id');
             $table->bigInteger('user_id')->unsigned();
             $table->string('contact_no', 20);
-            
-            $table->timestamps();
         });
     }
 

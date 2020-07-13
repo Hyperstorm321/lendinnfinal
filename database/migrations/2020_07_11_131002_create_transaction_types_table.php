@@ -16,8 +16,6 @@ class CreateTransactionTypesTable extends Migration
         Schema::create('transaction_types', function (Blueprint $table) {
             $table->id('transaction_type_id');
             $table->string('transaction_type');
-            
-            $table->timestamps();
         });
     }
 

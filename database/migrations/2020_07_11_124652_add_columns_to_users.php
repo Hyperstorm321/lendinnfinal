@@ -17,7 +17,7 @@ class AddColumnsToUsers extends Migration
             $table->renameColumn('id', 'user_id');
             $table->dropColumn('name');
             
-            $table->string('username', 20)->nullable();
+            $table->string('username', 50)->nullable();
             $table->string('first_name', 50);
             $table->string('middle_name', 50)->nullable();
             $table->string('last_name', 50);

@@ -21,8 +21,6 @@ class CreateRegionsAuditTable extends Migration
 
             $table->bigInteger('region_id');
             $table->string('region');
-
-            $table->timestamps();
         });
     }
 

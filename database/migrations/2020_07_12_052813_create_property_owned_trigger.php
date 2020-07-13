@@ -35,6 +35,7 @@ class CreatePropertyOwnedTrigger extends Migration
                                     property_owned_id,
                                     user_id,
                                     property_id,
+                                    property_selling_type_id,
                                     quantity,
                                     date_acquired
                                 )
@@ -44,6 +45,7 @@ class CreatePropertyOwnedTrigger extends Migration
                                         d.property_owned_id,
                                         d.user_id,
                                         d.property_id,
+                                        d.property_selling_type_id,
                                         d.quantity,
                                         d.date_acquired
                                 FROM deleted d
@@ -57,6 +59,7 @@ class CreatePropertyOwnedTrigger extends Migration
                                     property_owned_id,
                                     user_id,
                                     property_id,
+                                    property_selling_type_id,
                                     quantity,
                                     date_acquired
                                 )
@@ -66,6 +69,7 @@ class CreatePropertyOwnedTrigger extends Migration
                                         d.property_owned_id,
                                         d.user_id,
                                         d.property_id,
+                                        d.property_selling_type_id,
                                         d.quantity,
                                         d.date_acquired
                                 FROM deleted d
@@ -80,6 +84,7 @@ class CreatePropertyOwnedTrigger extends Migration
                             property_owned_id,
                             user_id,
                             property_id,
+                            property_selling_type_id,
                             quantity,
                             date_acquired
                         )
@@ -89,6 +94,7 @@ class CreatePropertyOwnedTrigger extends Migration
                                 i.property_owned_id,
                                 i.user_id,
                                 i.property_id,
+                                i.property_selling_type_id,
                                 i.quantity,
                                 i.date_acquired
                         FROM inserted i

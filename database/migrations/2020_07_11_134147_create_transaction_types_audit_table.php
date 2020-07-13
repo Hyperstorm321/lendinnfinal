@@ -21,8 +21,6 @@ class CreateTransactionTypesAuditTable extends Migration
 
             $table->bigInteger('transaction_type_id');
             $table->string('transaction_type');
-
-            $table->timestamps();
         });
     }
 

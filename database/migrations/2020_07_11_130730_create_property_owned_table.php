@@ -17,11 +17,10 @@ class CreatePropertyOwnedTable extends Migration
             $table->id('property_owned_id');
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('property_id')->unsigned();
+            $table->bigInteger('property_selling_type_id')->unsigned();
 
             $table->integer('quantity')->default(0);
             $table->dateTime('date_acquired');
-
-            $table->timestamps();
 
             $table->foreign('user_id')
                   ->references('user_id')->on('users');

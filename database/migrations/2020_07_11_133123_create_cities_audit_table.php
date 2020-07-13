@@ -21,8 +21,7 @@ class CreateCitiesAuditTable extends Migration
 
             $table->bigInteger('city_id');
             $table->string('city');
-
-            $table->timestamps();
+            $table->bigInteger('province_id');
         });
     }
 

@@ -16,8 +16,6 @@ class CreateSellingTypesTable extends Migration
         Schema::create('selling_types', function (Blueprint $table) {
             $table->id('selling_type_id');
             $table->string('selling_type');
-            
-            $table->timestamps();
         });
     }
 

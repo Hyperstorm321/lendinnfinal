@@ -24,8 +24,6 @@ class CreatePropertySellingTypesAuditTable extends Migration
             $table->bigInteger('selling_type_id')->unsigned();
             $table->integer('max_quantity')->default(0);
             $table->integer('available_quantity')->default(0);
-
-            $table->timestamps();
         });
     }
 

@@ -21,8 +21,6 @@ class CreateSellingTypesAuditTable extends Migration
 
             $table->bigInteger('selling_type_id');
             $table->string('selling_type');
-
-            $table->timestamps();
         });
     }
 

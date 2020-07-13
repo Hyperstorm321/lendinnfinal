@@ -21,8 +21,6 @@ class CreatePropertyTypesAuditTable extends Migration
 
             $table->bigInteger('property_type_id');
             $table->string('property_type');
-
-            $table->timestamps();
         });
     }
 

@@ -29,19 +29,18 @@ class CreatePropertiesAuditTable extends Migration
             $table->longText('features')->nullable();
             $table->longText('details')->nullable();
             $table->boolean('is_pet_allowed')->default(false);
-            $table->longText('pet_allowed_comment');
+            $table->longText('pet_allowed_comment')->nullable();
             $table->integer('no_of_bedrooms')->default(0);
             $table->integer('no_of_bathrooms')->default(0);
             $table->boolean('is_salable')->default(1);
+            $table->string('main_photo_src', 500)->nullable();
 
             $table->string('detailed_address')->nullable();
-            $table->bigInteger('region_id')->unsigned();
-            $table->bigInteger('province_id')->unsigned();
-            $table->bigInteger('city_id')->unsigned();
-            $table->bigInteger('barangay_id')->unsigned();
-            $table->bigInteger('postal_code_id')->unsigned();
-
-            $table->timestamps();
+            $table->bigInteger('region_id')->unsigned()->nullable();
+            $table->bigInteger('province_id')->unsigned()->nullable();
+            $table->bigInteger('city_id')->unsigned()->nullable();
+            $table->bigInteger('barangay_id')->unsigned()->nullable();
+            $table->bigInteger('postal_code_id')->unsigned()->nullable();
         });
     }
 

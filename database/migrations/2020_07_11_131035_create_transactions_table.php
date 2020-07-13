@@ -20,8 +20,6 @@ class CreateTransactionsTable extends Migration
             $table->bigInteger('transaction_type_id')->unsigned();
             $table->longText('message')->nullable();
 
-            $table->timestamps();
-
             $table->foreign('user_id')
                   ->references('user_id')->on('users');
 

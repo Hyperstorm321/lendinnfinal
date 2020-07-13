@@ -21,8 +21,7 @@ class CreatePostalCodesAuditTable extends Migration
 
             $table->bigInteger('postal_code_id');
             $table->string('postal_code', 10);
-
-            $table->timestamps();
+            $table->bigInteger('city_id')->nullable();
         });
     }
 

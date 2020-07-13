@@ -24,7 +24,7 @@ class CreateUsersAuditTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->string('username', 20)->nullable();
+            $table->string('username', 50)->nullable();
             $table->string('first_name', 50);
             $table->string('middle_name', 50)->nullable();
             $table->string('last_name', 50);

@@ -33,13 +33,15 @@ class CreateBarangaysTrigger extends Migration
                                     modified_date,
                                     operation,
                                     barangay_id,
-                                    barangay
+                                    barangay,
+                                    city_id
                                 )
                                 SELECT	@login_name,
                                         GETDATE(),
                                         'U',
                                         d.barangay_id,
-                                        d.barangay
+                                        d.barangay,
+                                        d.city_id
                                 FROM deleted d
                             END
                         ELSE 
@@ -49,13 +51,15 @@ class CreateBarangaysTrigger extends Migration
                                     modified_date,
                                     operation,
                                     barangay_id,
-                                    barangay
+                                    barangay,
+                                    city_id
                                 )
                                 SELECT	@login_name,
                                         GETDATE(),
                                         'D',
                                         d.barangay_id,
-                                        d.barangay
+                                        d.barangay,
+                                        d.city_id
                                 FROM deleted d
                             END
                     END
@@ -66,13 +70,15 @@ class CreateBarangaysTrigger extends Migration
                             modified_date,
                             operation,
                             barangay_id,
-                            barangay
+                            barangay,
+                            city_id
                         )
                         SELECT	@login_name,
                                 GETDATE(),
                                 'I',
                                 i.barangay_id,
-                                i.barangay
+                                i.barangay,
+                                i.city_id
                         FROM inserted i
                     END
             END

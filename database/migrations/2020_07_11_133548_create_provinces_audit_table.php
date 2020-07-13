@@ -21,8 +21,7 @@ class CreateProvincesAuditTable extends Migration
 
             $table->bigInteger('province_id');
             $table->string('province');
-
-            $table->timestamps();
+            $table->bigInteger('region_id');
         });
     }
 

@@ -19,8 +19,6 @@ class CreateLandlordsTable extends Migration
             $table->string('agency_name')->nullable();
             $table->integer('membership_year');
 
-            $table->timestamps();
-
             $table->foreign('user_id')
                   ->references('user_id')->on('users')
                   ->onDelete('cascade');

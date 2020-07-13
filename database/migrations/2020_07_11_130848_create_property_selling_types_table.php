@@ -20,8 +20,6 @@ class CreatePropertySellingTypesTable extends Migration
             $table->integer('max_quantity')->default(0);
             $table->integer('available_quantity')->default(0);
 
-            $table->timestamps();
-
             $table->foreign('property_id')
                   ->references('property_id')->on('properties')
                   ->onDelete('cascade');

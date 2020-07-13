@@ -20,9 +20,8 @@ class CreateBarangaysAuditTable extends Migration
             $table->char('operation', 1);
 
             $table->bigInteger('barangay_id');
-            $table->string('barangay', 10);
-
-            $table->timestamps();
+            $table->string('barangay', 50);
+            $table->bigInteger('city_id')->nullable();
         });
     }
 

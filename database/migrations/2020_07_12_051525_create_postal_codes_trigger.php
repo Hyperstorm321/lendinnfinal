@@ -34,13 +34,15 @@ class CreatePostalCodesTrigger extends Migration
                                     modified_date,
                                     operation,
                                     postal_code_id,
-                                    postal_code
+                                    postal_code,
+                                    city_id
                                 )
                                 SELECT	@login_name,
                                         GETDATE(),
                                         'U',
                                         d.postal_code_id,
-                                        d.postal_code
+                                        d.postal_code,
+                                        d.city_id
                                 FROM deleted d
                             END
                         ELSE 
@@ -50,13 +52,15 @@ class CreatePostalCodesTrigger extends Migration
                                     modified_date,
                                     operation,
                                     postal_code_id,
-                                    postal_code
+                                    postal_code,
+                                    city_id
                                 )
                                 SELECT	@login_name,
                                         GETDATE(),
                                         'D',
                                         d.postal_code_id,
-                                        d.postal_code
+                                        d.postal_code,
+                                        d.city_id
                                 FROM deleted d
                             END
                     END
@@ -67,13 +71,15 @@ class CreatePostalCodesTrigger extends Migration
                             modified_date,
                             operation,
                             postal_code_id,
-                            postal_code
+                            postal_code,
+                            city_id
                         )
                         SELECT	@login_name,
                                 GETDATE(),
                                 'I',
                                 i.postal_code_id,
-                                i.postal_code
+                                i.postal_code,
+                                i.city_id
                         FROM inserted i
                     END
             END

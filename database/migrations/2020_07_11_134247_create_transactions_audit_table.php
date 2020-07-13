@@ -24,8 +24,6 @@ class CreateTransactionsAuditTable extends Migration
             $table->bigInteger('property_id')->unsigned();
             $table->bigInteger('transaction_type_id')->unsigned();
             $table->longText('message')->nullable();
-
-            $table->timestamps();
         });
     }
 
