@@ -33,6 +33,7 @@
     </v-app>
 </template>
 
+
 <script>
 export default {
      data(){
@@ -82,3 +83,9 @@ export default {
         }
     }
 </script>
+
+<style scoped>
+h1{
+    color: teal;
+}
+</style>

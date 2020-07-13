@@ -67,6 +67,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/myproperties">
+                                        {{ __('My Properties') }}
+                                    </a>
+
                                     <a class="dropdown-item" href="/accountsetting">
                                         {{ __('Account Settings') }}
                                     </a>

@@ -24,6 +24,7 @@ Vue.prototype.$userId = document.querySelector("meta[name='user-id']").getAttrib
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('index-page', require('./components/Index.vue').default);
 Vue.component('user-account', require('./components/authenticated/UserAccount.vue').default);
+Vue.component('user-properties', require('./components/authenticated/UserProperties.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
